@@ -29,7 +29,7 @@ function NavSign() {
               onClick={toggleUserMenu}
             >
               <span className="sr-only">Open user menu</span>
-              <FaUserCircle size={26} />
+              <FaUserCircle size={26} color="black" />
             </button>
           </div>
           {/* Conditional rendering of the user dropdown menu */}

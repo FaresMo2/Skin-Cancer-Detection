@@ -4,7 +4,7 @@ import { ImagesProvider } from "../context/ImagesContext";
 import SpinnerFullPage from "../Loading-components/SpinnerFullPage";
 import ProtectedRoute from "../pages/ProtectedRoute";
 
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 // Before splitting Code

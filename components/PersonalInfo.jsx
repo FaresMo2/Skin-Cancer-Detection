@@ -4,7 +4,7 @@ function PersonalInfo() {
 
   return (
     <div className="w-full md:w-3/5 p-8 bg-white lg:ml-4 shadow-md">
-      <div className="rounded shadow p-6">
+      <div className="rounded  p-6">
         <div className="pb-6">
           <label
             htmlFor="name"

@@ -18,13 +18,13 @@ export default function Profile() {
       <hr />
 
       <div className="album container mx-auto mt-10">
-        <h2 className="font-bold text-3xl border-b border-gray-500 pb-2 w-fit">
-          Results
-        </h2>
+        <h1 className="inline-flex  items-center justify-center px-6 py-3 text-xl font-bold text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 ">
+          The Analysis&apos; Results
+        </h1>
 
         <ul className="grid grid-cols-[repeat(auto-fill,minmax(330px,1fr))] gap-14 mt-14">
           {upLoadImages.map((img, index) => (
-            <ImageResult key={index} img={img} />
+            <ImageResult key={index} img={img} upLoadImages={upLoadImages} />
           ))}
         </ul>
       </div>

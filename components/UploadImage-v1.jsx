@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MdDeleteSweep } from "react-icons/md";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,36 +7,10 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ImageComponent from "../reusable-components/ImageComponent";
 import { useImages } from "../context/ImagesContext";
-import axios from "axios"; // Import Axios
 
 function UploadImage() {
   const { upLoadImages, handlePhotoChange, handleDelete } = useImages();
-  const [uploading, setUploading] = useState(false);
-  const apiUrl = "https://169f-34-32-158-43.ngrok-free.app/";
-
-  const handleUpload = async () => {
-    setUploading(true);
-    try {
-      const formData = new FormData();
-      upLoadImages.forEach((image, index) => {
-        formData.append(`image${index}`, image);
-      });
-
-      const response = await axios.post(apiUrl, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-
-      console.log(response.data);
-      alert("Images uploaded successfully!");
-    } catch (error) {
-      console.error("Error uploading images:", error);
-      alert("Failed to upload images.");
-    } finally {
-      setUploading(false);
-    }
-  };
+  console.log(upLoadImages);
 
   return (
     <div id="uploadImage" className="up-img my-56">
@@ -113,6 +86,8 @@ function UploadImage() {
                   </div>
                 </SwiperSlide>
               ))}
+              <br />
+              <br />
             </Swiper>
           ) : (
             <p className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold text-gray-400">
@@ -120,15 +95,6 @@ function UploadImage() {
             </p>
           )}
         </div>
-        {upLoadImages.length > 0 && (
-          <button
-            onClick={handleUpload}
-            className="mt-4 bg-blue-500 text-white px-6 py-2 rounded-lg"
-            disabled={uploading}
-          >
-            {uploading ? "Uploading..." : "Upload Images"}
-          </button>
-        )}
       </div>
     </div>
   );

@@ -7,6 +7,9 @@ import ProtectedRoute from "../pages/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import ResetPassword from "../pages/ResetPassword";
+import ChangePassword from "../pages/ChangePassword";
+
 // Before splitting Code
 // import MainPage from "../pages/MainPage";
 // import Login from "../pages/Login";
@@ -60,6 +63,11 @@ function App() {
               />
               <Route path="login" element={<Login />} />
               <Route path="signup" element={<SignUp />} />
+              <Route path="/reset-password" element={<ResetPassword />} />
+              <Route
+                path="/change-password/:userId"
+                element={<ChangePassword />}
+              />
               <Route path="*" element={<Error />} />
             </Routes>
           </Suspense>

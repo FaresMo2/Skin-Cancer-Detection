@@ -98,7 +98,7 @@ function Login() {
 
           <div className=" gap-2 mt-6">
             <p className="block antialiased font-sans text-sm leading-normal font-medium text-gray-900">
-              <Link>Forgot Password</Link>
+              <Link to="/reset-password">Forgot Password</Link>
             </p>
           </div>
 

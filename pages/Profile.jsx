@@ -2,6 +2,7 @@ import NavSign from "../components/NavSign";
 import { useImages } from "../context/ImagesContext";
 import ImageResult from "../components/ImageResult";
 import PersonalInfo from "../components/PersonalInfo";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const { upLoadImages } = useImages();
@@ -12,6 +13,11 @@ export default function Profile() {
       <div className="h-full mt-10">
         <div className="block md:flex mb-8">
           <PersonalInfo />
+          <div className="flex justify-center items-center ml-60">
+            <p className="block antialiased font-sans text-sm leading-normal font-medium text-white px-6 py-3 rounded bg-gray-900">
+              <Link to="/change-password/:userId">Forgot Password?</Link>
+            </p>
+          </div>
         </div>
       </div>
 

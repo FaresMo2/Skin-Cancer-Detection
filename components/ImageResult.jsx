@@ -1,15 +1,64 @@
 import ImageComponent from "../reusable-components/ImageComponent";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Tooltip,
+} from "@material-tailwind/react";
 
 function ImageResult({ img }) {
   return (
-    <li className="border border-gray-200 p-5 rounded-md">
-      <ImageComponent src={img} alt="result" />
-      <div className="text-center">
-        <h2 className="text-lg my-6 font-semibold">
-          your type of illness is (type)
-        </h2>
-        <p className="text-lg">The Result is : (result)</p>
-      </div>
+    <li>
+      <Card className="w-96">
+        <CardHeader floated={false} className="h-80">
+          <ImageComponent src={img} alt="type-picture" />
+        </CardHeader>
+        <CardBody className="text-center">
+          <Typography variant="h4" color="blue-gray" className="mb-2">
+            The Result
+          </Typography>
+          <Typography color="blue-gray" className="font-medium" textGradient>
+            CEO / Co-Founder
+          </Typography>
+        </CardBody>
+        <CardFooter className="flex justify-center gap-7 pt-2">
+          <Tooltip content="Like">
+            <Typography
+              as="a"
+              href="#facebook"
+              variant="lead"
+              color="blue"
+              textGradient
+            >
+              <i className="fab fa-facebook" />
+            </Typography>
+          </Tooltip>
+          <Tooltip content="Follow">
+            <Typography
+              as="a"
+              href="#twitter"
+              variant="lead"
+              color="light-blue"
+              textGradient
+            >
+              <i className="fab fa-twitter" />
+            </Typography>
+          </Tooltip>
+          <Tooltip content="Follow">
+            <Typography
+              as="a"
+              href="#instagram"
+              variant="lead"
+              color="purple"
+              textGradient
+            >
+              <i className="fab fa-instagram" />
+            </Typography>
+          </Tooltip>
+        </CardFooter>
+      </Card>
     </li>
   );
 }

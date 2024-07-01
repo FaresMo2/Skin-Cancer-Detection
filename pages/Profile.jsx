@@ -28,7 +28,7 @@ export default function Profile() {
           The Analysis&apos; Results
         </h1>
 
-        <ul className="grid grid-cols-[repeat(auto-fill,minmax(330px,1fr))] gap-14 mt-14">
+        <ul className="grid grid-cols-[repeat(auto-fill,minmax(330px,1fr))] gap-20 mt-14">
           {upLoadImages.map((img, index) => (
             <ImageResult key={index} img={img} upLoadImages={upLoadImages} />
           ))}

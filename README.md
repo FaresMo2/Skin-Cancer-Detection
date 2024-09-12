@@ -27,6 +27,11 @@ Feel free to explore the front-end and integrate it with your preferred AI solut
 
 ---
 
+## Live Demo:
+[Visit the live demo here](https://skin-cancer-detection-nu.vercel.app/)
+
+---
+
 ## Installation and Setup:
 
 1. Clone the repository:

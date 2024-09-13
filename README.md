@@ -37,16 +37,21 @@ Feel free to explore the front-end and integrate it with your preferred AI solut
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-repo/skin-cancer-detection.git
-
+   
 
 2. **Install dependencies:**
    ```bash
    npm install
-
+   
    
 3. **Run the development server:**
    ```bash
    npm run server
+   
+
+4. **Start the application:**
+   ```bash
+   npm run dev
 
 
 ## Future Improvements:

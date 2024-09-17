@@ -18,6 +18,11 @@ export default {
       height: {
         120: "30rem",
       },
+      boxShadow: {
+        "custom-light": "0 4px 8px rgba(0, 0, 0, 0.1)",
+        "custom-dark": "0 8px 16px rgba(0, 0, 0, 0.3)",
+        "custom-outline": "0 0 0 3px rgba(0, 0, 0, 0.2)",
+      },
     },
   },
   plugins: [],
